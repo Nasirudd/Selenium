@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="practiceSelenium.TestCng"/>
+      <class name="learnSelenium.BrowserTest"/>
+      <class name="learnSelenium.TestXpath"/>
+      <class name="learnSelenium.Collection_ListArrayList"/>
+      <class name="practiceSelenium.CngXml"/>
+      <class name="learnSelenium.ConfirmAlert"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

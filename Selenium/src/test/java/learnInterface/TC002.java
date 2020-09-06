@@ -1,0 +1,149 @@
+package learnInterface;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Test;
+
+public class TC002 extends TC001_login {
+
+	@Test
+	
+	public void create() throws InterruptedException {
+		 
+		  clickByLinkText("Create Lead");
+		  
+		  Thread.sleep(2000);
+		  	driver.findElementByLinkText("Create Lead").click();
+		    //enter company name
+		   driver.findElementById("createLeadForm_companyName").sendKeys("Tcs");
+		  //enter first name
+		   driver.findElementById("createLeadForm_firstName").sendKeys("Hema");
+		   
+		   //enter first name***
+		   //driver.findElementById("createLeadForm_companyName").sendKeys("xyz");
+		  driver.findElementById("createLeadForm_firstNameLocal").sendKeys("kuttee");
+		  
+		 // Enter Last Name*
+		  
+		   //enter salutation
+		   driver.findElementById("createLeadForm_personalTitle").sendKeys("well");
+		   //enter title
+		   
+		   driver.findElementById("createLeadForm_generalProfTitle").sendKeys("MS");
+	       //enter annual revenue
+		   driver.findElementById("createLeadForm_annualRevenue").sendKeys("200");
+		   //enter code
+		   driver.findElementById("createLeadForm_sicCode").sendKeys("23");
+		   	   //enter description
+		   driver.findElementById("createLeadForm_description").sendKeys("Tcs");  
+		   	   
+		   //enter important
+		   driver.findElementById("createLeadForm_importantNote").sendKeys("byjul");
+		   //enter country code
+		   driver.findElementById("createLeadForm_primaryPhoneCountryCode").sendKeys("7");
+		   //enter area code
+		   driver.findElementById("createLeadForm_primaryPhoneAreaCode").sendKeys("kl");
+		   //enter extention
+		   driver.findElementById("createLeadForm_primaryPhoneExtension").sendKeys("8");
+		   //enter email address
+		   driver.findElementById("createLeadForm_primaryEmail").sendKeys("abc@gmail.com");
+		   //enter to name
+		    driver.findElementById("createLeadForm_generalToName").sendKeys("mac");
+		   //enter address line 
+		    driver. findElementByClassName("inputBox").sendKeys("local");
+		     driver.findElementById("createLeadForm_generalAddress1").sendKeys("main");
+		   
+		   //enter city
+		   driver.findElementById("createLeadForm_generalCity").sendKeys("vsa");
+		   //enter postal
+		   driver.findElementById("createLeadForm_generalPostalCode").sendKeys("22079");
+		   //enter postal code ext
+		     driver.findElementById("createLeadForm_generalPostalCodeExt").sendKeys("23");
+		   //parent account
+		   // driver.findElementById("createLeadForm_parentPartyId").sendKeys("12");
+		   //enter surname
+		   driver.findElementById("createLeadForm_lastName").sendKeys("din");
+		   	   //enter last name
+		   driver.findElementById("createLeadForm_lastNameLocal").sendKeys("M");
+		   //enter date of birth
+		   driver.findElementById("createLeadForm_birthDate").sendKeys("1/1/95");
+		   //enter department 
+		   driver.findElementById("createLeadForm_departmentName").sendKeys("IT");
+		  //no employee
+		   driver.findElementById("createLeadForm_numberEmployees").sendKeys("200");
+		  //enter symble
+		   driver.findElementById("createLeadForm_tickerSymbol").sendKeys("bird");
+		   //enter phone
+		   driver.findElementById("createLeadForm_primaryPhoneNumber").sendKeys("321");
+		   //ask for
+		   driver.findElementById("createLeadForm_primaryPhoneAskForName").sendKeys("noor");
+		   //web url
+		   driver.findElementById("createLeadForm_primaryWebUrl").sendKeys("mmm");
+		   //attendent name
+		   driver.findElementById("createLeadForm_generalAttnName").sendKeys("dhon mia");
+		   //address 2
+		   driver.findElementById("createLeadForm_generalAddress2").sendKeys("gram");
+		  
+		       WebElement source = driver.findElementById("createLeadForm_dataSourceId");
+		       Select dd = new Select(source);
+		       dd.selectByVisibleText("Employee");
+		       
+		       
+		       WebElement industy = driver.findElementById("createLeadForm_industryEnumId");
+		       Select dd1 = new Select(industy);	       	      
+		       dd1.selectByVisibleText("Distribution"); 
+		              
+		       WebElement owner = driver.findElementById("createLeadForm_ownershipEnumId");
+		       Select dd2 = new Select(owner);
+		       dd2.selectByValue("OWN_PROPRIETOR");
+		       
+		       WebElement state = driver.findElementById("createLeadForm_generalStateProvinceGeoId");
+		       Select dd3 = new Select(state);
+		       dd3.selectByVisibleText("Virginia");
+		       
+		       WebElement market = driver.findElementById("createLeadForm_marketingCampaignId");
+		       Select dd4 = new Select(market);
+		       dd4.selectByVisibleText("Demo Marketing Campaign");
+		       
+		 /*  WebElement owner = driver.findElementById("createLeadForm_ownershipEnumId");
+		   Select dd2 = new Select(owner);
+		   dd2.selectByIndex(1);
+		   
+		 /* WebElement sour = driver.findElementById("createLeadForm_dataSourceId");
+		  Select dd3 = new Select(sour);
+		  dd3.selectByValue("LEAD_DIRECTMAIL");  	  
+		     
+		   
+		//   WebElement findElementById = driver.findElementById("createLeadForm_dataSourceId");
+		  
+		 WebElement state = driver.findElementById("createLeadForm_generalStateProvinceGeoId");
+		  Select dd4 = new Select(state);
+		  dd4.selectByVisibleText("Virginia");*/
+		     
+
+		       //create lead
+		 	   driver.findElementByName("submitButton").click();
+		 	  	
+				//close browser
+				
+				//	driver.close();	
+				
+		}
+	}    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+		    
+
+		
+		
+		
+		
+	
+	
+
+
